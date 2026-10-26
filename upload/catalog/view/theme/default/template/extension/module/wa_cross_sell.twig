@@ -1,0 +1,13 @@
+<section class="wa-cross-sell">
+  <h2>{{ heading_title|escape }}</h2>
+  <div class="wa-cross-sell__grid">
+    {% for product in products %}
+    <article class="wa-cross-sell__card" data-wa-product="{{ product.product_id }}">
+      <a href="{{ product.href|replace({'&amp;':'&'})|escape }}" class="wa-cross-sell__image"><img src="{{ product.image|escape }}" alt="{{ product.name|escape }}" width="{{ product.width }}" height="{{ product.height }}" loading="lazy"></a>
+      <h3><a href="{{ product.href|replace({'&amp;':'&'})|escape }}">{{ product.name|escape }}</a></h3>
+      <p class="wa-cross-sell__price">{% if product.price %}{% if product.special is not same as(false) %}<del>{{ product.price|escape }}</del> <strong>{{ product.special|escape }}</strong>{% else %}<strong>{{ product.price|escape }}</strong>{% endif %}{% else %}{{ text_login_price|escape }}{% endif %}</p>
+      <a href="{{ product.href|replace({'&amp;':'&'})|escape }}" class="btn btn-default">{{ text_view|escape }}</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>

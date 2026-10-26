@@ -1,0 +1,9 @@
+admin/controller/extension/module/wa_cross_sell.php
+admin/language/en-gb/extension/module/wa_cross_sell.php
+admin/language/uk-ua/extension/module/wa_cross_sell.php
+admin/view/template/extension/module/wa_cross_sell.twig
+catalog/controller/extension/module/wa_cross_sell.php
+catalog/language/en-gb/extension/module/wa_cross_sell.php
+catalog/language/uk-ua/extension/module/wa_cross_sell.php
+catalog/view/javascript/wa-cross-sell.css
+catalog/view/theme/default/template/extension/module/wa_cross_sell.twig
